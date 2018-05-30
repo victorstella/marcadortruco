@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title>Marcador de Truco do Vitao</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <table class="marcador">
+      <tr>
+        <th id="pontuacaoNos">0</th>
+        <th id="pontuacaoEles">0</th>
+      </tr>
+      <tr>
+        <th><button type="button" id="nos" onclick="tentoNos(1)">nos</button></th>
+        <th><button type="button" id="eles" onclick="tentoEles(1)">eles</button></th>
+      </tr>
+      <tr>
+        <th><button type="button" id="truco">TRUCO!</button></th>
+        <th><button type="button" id="seis">SEIS!</button></th>
+        <th><button type="button" id="nove">NOVE!</button></th>
+        <th><button type="button" id="doze">DOZE!</button></th>
+      </tr>
+    </table>
+
+    <script>
+
+      $(document).ready(function(){
+        $("#truco").click(function(){
+          $("#nos").attr("onclick", function(i, origValue){
+            return "tentoNos(3)";
+          });
+          $("#eles").attr("onclick", function(i, origValue){
+            return "tentoEles(3)";
+          });
+        });
+      });
+
+      $(document).ready(function(){
+        $("#seis").click(function(){
+          $("#nos").attr("onclick", function(i, origValue){
+            return "tentoNos(6)";
+          });
+          $("#eles").attr("onclick", function(i, origValue){
+            return "tentoEles(6)";
+          });
+        });
+      });
+
+      $(document).ready(function(){
+        $("#nove").click(function(){
+          $("#nos").attr("onclick", function(i, origValue){
+            return "tentoNos(9)";
+          });
+          $("#eles").attr("onclick", function(i, origValue){
+            return "tentoEles(9)";
+          });
+        });
+      });
+
+      $(document).ready(function(){
+        $("#doze").click(function(){
+          $("#nos").attr("onclick", function(i, origValue){
+            return "tentoNos(12)";
+          });
+          $("#eles").attr("onclick", function(i, origValue){
+            return "tentoEles(12)";
+          });
+        });
+      });
+
+      function tentoNos(n) {
+        var ptsNos = document.getElementById("pontuacaoNos").innerHTML, count;
+        for(count = 0;count < n;count++){
+          ptsNos++;
+          if(ptsNos > 12){
+            alert("NÓS GANHAMOS!");
+            ptsNos = 0;
+          }
+        }
+        $("#nos").attr("onclick", function(i, origValue){
+          return "tentoNos(1)";
+        });
+        $("#eles").attr("onclick", function(i, origValue){
+          return "tentoEles(1)";
+        });
+        return document.getElementById("pontuacaoNos").innerHTML = ptsNos;
+      }
+
+      function tentoEles(n) {
+        var ptsEles = document.getElementById("pontuacaoEles").innerHTML, count;
+        for(count = 0;count < n;count++){
+          ptsEles++;
+          if(ptsEles > 12){
+            alert("ELES GANHARAM!");
+            ptsEles = 0;
+          }
+        }
+        $("#nos").attr("onclick", function(i, origValue){
+          return "tentoNos(1)";
+        });
+        $("#eles").attr("onclick", function(i, origValue){
+          return "tentoEles(1)";
+        });
+        return document.getElementById("pontuacaoEles").innerHTML = ptsEles;
+      }
+
+    </script>
+
+  </body>
+</html>
