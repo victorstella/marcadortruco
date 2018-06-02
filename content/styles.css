@@ -1,0 +1,46 @@
+.corpo {
+  background-color: #454545;
+  width: 99%;
+  font-family: verdana;
+}
+
+.unicaDiv {
+  padding: 4% 25% 5% 30%;
+}
+
+.titulo {
+  padding-left: 10%;
+  font-size: 40px;
+  font-family: verdana;
+}
+
+.marcador {
+  position: relative;
+  padding-left: 26%;
+  padding-right: 25%;
+  font-size: 20px;
+  width: 20%;
+  height: 40%;
+}
+
+.nos {
+  width: 100px;
+  height: 40px;
+  background-color: black;
+  color: white;
+}
+
+.eles {
+  width: 100px;
+  height: 40px;
+  background-color: black;
+  color: white;
+}
+
+.tentos {
+  width: 204px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  margin-left: 26.3%;
+}

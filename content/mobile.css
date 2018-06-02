@@ -1,0 +1,49 @@
+.mobile-corpo {
+  position: relative;
+  background-color: #454545;
+  width: 95%;
+  font-family: verdana;
+  padding-top: 15%;
+}
+
+.mobile-unicaDiv {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-titulo {
+  position: relative;
+  padding: 0;
+  font-size: 25px;
+  text-align: center;
+}
+
+.mobile-marcador {
+  position: relative;
+  padding-top: 10%;
+  width: 100%;
+}
+
+.mobile-nos {
+  width: 150px;
+  height: 40px;
+  background-color: black;
+  color: white;
+}
+
+.mobile-eles {
+  width: 150px;
+  height: 40px;
+  background-color: black;
+  color: white;
+}
+
+.mobile-tentos {
+  position: relative;
+  width: 91.8%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  margin: 3% 0 0 4.3%;
+}
