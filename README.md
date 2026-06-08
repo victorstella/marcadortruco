@@ -1,4 +1,4 @@
-# Marcador de Truco
+# [Marcador de Truco](https://marcadortruco.vercel.app/)
 
 Marcador de placar para partidas de Truco, feito com Next.js 15, React 19 e Tailwind CSS. Funciona no celular e no desktop — sem instalação, sem cadastro e sem coleta de dados.
 
