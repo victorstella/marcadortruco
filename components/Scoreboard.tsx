@@ -19,10 +19,10 @@ const RAISE_STAGES: Record<
 };
 
 const RAISE_BTN =
-  'w-full h-10 self-center bg-indigo-950 text-yellow-400 font-semibold border border-indigo-600 rounded-lg cursor-pointer hover:bg-violet-950 hover:border-indigo-500 disabled:cursor-not-allowed disabled:bg-indigo-950/40 disabled:text-yellow-400/40 disabled:border-indigo-600/40';
+  'w-full h-10 self-center bg-indigo-950 text-yellow-400 font-semibold border border-indigo-600 rounded-lg cursor-pointer hover:bg-purple-800/30 hover:border-indigo-500 disabled:cursor-not-allowed disabled:bg-indigo-950/40 disabled:text-yellow-400/40 disabled:border-indigo-600/40';
 
 const CORRER_BTN =
-  'w-full h-9 text-sm font-semibold bg-gray-900 text-red-400 border border-red-800 rounded-lg cursor-pointer hover:bg-red-950 hover:border-red-600 disabled:cursor-not-allowed disabled:bg-gray-900/40 disabled:border-red-800/40 disabled:text-red-400/40';
+  'w-full h-9 text-sm font-semibold bg-gray-900 text-red-400 border border-red-800 rounded-lg cursor-pointer hover:bg-red-700/20 hover:border-red-500 disabled:cursor-not-allowed disabled:bg-gray-900/40 disabled:border-red-800/40 disabled:text-red-400/40';
 
 const RODADA_BTN =
   'w-full mt-2 px-1 py-2 text-sm md:text-lg bg-gray-900 border border-gray-500 rounded-lg cursor-pointer';
@@ -149,19 +149,19 @@ export function Scoreboard() {
         <div className="flex flex-col mt-10 text-xl w-full md:w-[90%] items-center">
           <div className="grid grid-cols-3 gap-4 w-full text-center">
             <button
-              className={`${RODADA_BTN} text-emerald-400 hover:bg-emerald-950 hover:border-emerald-600`}
+              className={`${RODADA_BTN} text-emerald-400 hover:bg-emerald-800/20 hover:border-emerald-600`}
               onClick={tentoNos}
             >
               Rodada Nossa
             </button>
             <button
-              className={`${RODADA_BTN} text-sky-400 hover:bg-blue-950 hover:border-blue-600`}
+              className={`${RODADA_BTN} text-orange-400 hover:bg-orange-700/20 hover:border-orange-500`}
               onClick={resetGame}
             >
               Zerar
             </button>
             <button
-              className={`${RODADA_BTN} text-cyan-400 hover:bg-cyan-950 hover:border-cyan-600`}
+              className={`${RODADA_BTN} text-sky-400 hover:bg-sky-900/20 hover:border-sky-500`}
               onClick={tentoEles}
             >
               Rodada Deles
@@ -171,10 +171,10 @@ export function Scoreboard() {
             <p className="w-full text-green-500 self-center text-2xl font-black">
               {nos}
             </p>
-            <p className="w-full text-sky-300 self-center text-sm md:text-xl">
+            <p className="w-full text-gray-200 self-center text-sm md:text-xl">
               Valendo: {pendingPoints}
             </p>
-            <p className="w-full text-cyan-400 self-center text-2xl font-black">
+            <p className="w-full text-sky-400 self-center text-2xl font-black">
               {eles}
             </p>
 
